@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nutrition</title>
+<meta name="description" content="Tyler's daily meal plan: totals, meals and foods, saved copies to compare.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#EEF0EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D0F0D" media="(prefers-color-scheme: dark)">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Nutrition">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/favicon-48.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="app.css">
+<style>
+:root { color-scheme: light; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <header class="topbar" id="topbar">
+    <div class="brand">
+      <h1 class="wordmark">Nutrition</h1>
+      <p class="mini" id="mini" aria-hidden="true"></p>
+    </div>
+  </header>
+  <nav class="tabs" aria-label="Views">
+    <button type="button" id="tab-plan" data-action="tab" data-tab="plan" aria-pressed="true">Current plan</button>
+    <button type="button" id="tab-copies" data-action="tab" data-tab="copies" aria-pressed="false">Saved copies<span class="count" id="copies-count"></span></button>
+  </nav>
+  <p class="notice" id="notice" role="status" hidden></p>
+  <main class="view" id="view"></main>
+  <footer class="meta" id="meta"></footer>
+</div>
+<datalist id="food-names"></datalist>
+<div class="toast" id="toast" role="status" hidden><span id="toast-text"></span><button type="button" id="toast-btn"></button></div>
+<noscript>Nutrition needs JavaScript.</noscript>
+<script src="app.js"></script>
+</body>
+</html>
